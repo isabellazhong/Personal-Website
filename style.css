@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400;500;600;700&display=swap');
+
+.background{
+    width: 100vw;
+    height: 3671px;
+    background: var(--bg, linear-gradient(180deg, #252447 6.5%, #403D7A 18%, #EE6151 40%, rgba(249, 194, 155, 0.98) 53.5%, #CFD2FF 71.5%, #E0E4FF 84.5%));
+    background-size: cover;
+    overflow: visible;
+}
+
+#canvas{
+    position:absolute; 
+    width: 100vw;
+    height: 300px;
+    top:0; 
+    left:0;
+    z-index:1000;
+}
+
+.navigation_bar{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    margin: auto;
+    z-index: 1000;
+}
+
+.nav_bar{
+    top:0;
+    width: 80vw;
+    height: 100px;
+    border-radius: 40px;
+    background: rgba(217, 217, 217, 0.2);
+
+    position:sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nav_btn{
+    width: 15vw;
+    height: 60px;
+    background: #EDEEFF;
+    box-shadow: 0px 3px 10px 6px rgba(0, 0, 0, 0.25);
+    
+    border-radius: 20px;
+    display: inline-block;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+
+    color: #403D7A;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #403D7A;
+    font-family: "Kode Mono";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.nav_btn:hover{
+    background-color:#CFD2FF;
+}
+
+#moon_btn{
+    position:absolute; 
+    width: 100px;
+    height: 100%;
+    top:50%;
+    left: 1%;
+    transform: translateY(-50%);
+    transition: top 0.5s ease-in-out;
+}
+
+#moon_btn:hover{
+    top:48%;
+}
+
+.bars{
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    display: list-item;
+    left: 90%;
+    top: 20px;
+    
+}
+
+.bar{
+    width: 50px;
+    height:3px;
+    background-color: white;
+    margin: 10px;
+}
+
+@media (max-width: 800px){
+    .nav_btn{
+        display: none;
+    }
+
+    .nav_bar{
+        display: none;
+    }
+
+    .navigation_bar{
+        min-height: 100px;
+    }
+
+    .bars{
+        visibility: visible;
+    }
+
+}
